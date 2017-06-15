@@ -1,0 +1,25 @@
+{% extends 'guac_manage/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br><br><hr>
+<div class='container'>
+  <div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+      <form method="POST">
+        {% csrf_token %}
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_KowLT7a2MVwow1A5BfvQmHCu"
+          data-amount="999"
+          data-name="Demo Site"
+          data-description="Widget"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto">
+        </script>
+      </form>
+  </div>
+  </div>
+</div>
+{% endblock %}
